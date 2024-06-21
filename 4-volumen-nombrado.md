@@ -8,7 +8,9 @@ docker volume create <nombre volumen>
 ```
 
 ### Crear el volumen nombrado: vol-postgres
-# COMPLETAR CON EL COMANDO
+```
+docker volume create vol-postgres
+```
 
 ## MOUNTPOINT
 Un mountpoint se refiere al lugar en el sistema de archivos donde un dispositivo de almacenamiento se une (o monta) al sistema de archivos. Es el punto donde los archivos y directorios almacenados en ese dispositivo de almacenamiento son accesibles para el sistema operativo y las aplicaciones.
@@ -18,7 +20,8 @@ Por ejemplo, en Windows las unidades de almacenamiento (como `C:`, `D:`, etc.) a
 Cuando creas un volumen nombrado, Docker asigna un punto de montaje específico en el sistema de archivos del host para ese volumen.
 
 ### ¿Cuál es el Mountpoint de vol-postgres?
-# COMPLETAR CON LA RESPUESTA A LA PREGUNTA
+El Mountpoint de vol-postgres es:
+/var/lib/docker/volumes/vol-postgres/_data
 
 ### Estructura del Punto de Montaje:
 - /var/lib/docker/volumes/: Es la ubicación base donde Docker almacena todos los volúmenes en el sistema de archivos del host.
@@ -35,7 +38,9 @@ docker run -d --name <nombre contenedor> -v <nombre volumen>:<ruta contenedor> <
 ```
 
 ### Crear la red net-drupal de tipo bridge
-# COMPLETAR CON EL COMANDO
+```
+docker run -d --name postgres-container -v vol-postgres:/var/lib/postgresql/data postgres
+```
 
 ### Crear un servidor postgres vinculado a la red net-drupal, completar la ruta del contenedor
 ```
@@ -51,7 +56,9 @@ docker run -d --name client-postgres --publish published=9500,target=80 -e PGADM
 ### Usar el cliente postgres para conectarse al servidor postgres, para la conexión usar el nombre del servidor en lugar de la dirección IP.
 
 ### Crear los volúmenes necesarios para drupal, esto se puede encontrar en la documentación
-### COMPLETAR CON LOS COMANDOS
+```
+docker network create net-drupal
+```
 
 ### Crear el contenedor server-drupal vinculado a la red, usar la imagen drupal, y vincularlo a los volúmenes nombrados
 ```
