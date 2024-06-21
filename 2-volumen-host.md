@@ -7,28 +7,30 @@ docker run -d --name <nombre contenedor> -v <ruta carpeta host>:<ruta carpeta co
 
 ### Crear un volumen tipo host con la imagen nginx:alpine, para la ruta carpeta host: directorio en donde se encuentra la carpeta html en tu computador y para la ruta carpeta contenedor: /usr/share/nginx/html esta ruta se obtiene al revisar la documentación
 ![Volúmenes](imagenes/volumen-host.PNG)
-# COMPLETAR CON EL COMANDO
-
+```
+docker run -d --name nginx1 -p 8080:80 -v //c/Users/LabP3E010/Documents/html:/usr/share/nginx/html nginx:alpine
+```
 ### ¿Qué sucede al ingresar al servidor de nginx?
-# COMPLETAR CON LA RESPUESTA A LA PREGUNTA
+*Ocurre un error 403*
 
 ### ¿Qué pasa con el archivo index.html del contenedor?
-# COMPLETAR CON LA RESPUESTA A LA PREGUNTA
+*El archivo index.html del contenedor no es accesible porque el usuario que ejecuta Nginx no tiene permisos para leer el contenido del directorio /usr/share/nginx/html. 
+El error 403 indica que el servidor Nginx tiene acceso al directorio, pero no puede leer el contenido debido a restricciones de permisos.*
 
 ### Ir a https://html5up.net/ y descargar un template gratuito, descomprirlo dentro de nginx/html
 ### ¿Qué sucede al ingresar al servidor de nginx?
-# COMPLETAR CON LA RESPUESTA A LA PREGUNTA
+*Se carga el template gratuito que descargue.*
 
 ### Eliminar el contenedor
-# COMPLETAR CON EL COMANDO
-
+```
+docker rm -f nginx1
+```
 ### ¿Qué sucede al crear nuevamente el mismo contenedor con volumen de tipo host a los directorios definidos anteriormente?
-# COMPLETAR CON LA RESPUESTA A LA PREGUNTA
+*Se carga el template y ya no ocurre el error 403.*
 
 ### ¿Qué hace el comando pwd?
-# COMPLETAR CON LA RESPUESTA A LA PREGUNTA
-Si quieres incluir el comando pwd dentro de un comando de Docker, lo puedes hacer de diferentes maneras dependiendo del shell que estés utilizando.
 
+*pwd imprime la ruta absoluta del directorio en el que se encuentra el usuario en ese momento. Esto puede ser útil para saber dónde se encuentra actualmente en el sistema de archivos.*
 
 ### Volumen tipo host usando PWD y PowerShell
 ```
