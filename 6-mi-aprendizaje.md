@@ -1,3 +1,4 @@
-# COMPLETAR  
-Comparando sus conocimientos antes de hacer la práctica con sus conocimientos después de hacer la tarea, explicar los principales aprendizajes logrados para beneficio de su formación profesional.  
-Si solucionó un problema presentado al realizar la práctica también se debe documentar.
+# MI APRENDIZAJE
+Esta práctica me ayudó mucho a entender cómo usar volúmenes en Docker. Antes, no sabía cómo guardar datos en el host o asignar carpetas específicas para guardar información. Aprender esto es importante para otras materias donde usamos bases de datos y herramientas ORM en aplicaciones Java Web. Poder crear y manejar volúmenes en Docker asegura que los datos no se pierdan, incluso si los contenedores se cierran, lo cual es crucial para mantener las aplicaciones funcionando bien.
+
+Durante la práctica, tuve algunos problemas, como configurar permisos para las carpetas del contenedor de Drupal. Aunque logré solucionarlo, aprendí que es muy importante entender y manejar bien los permisos en estos entornos. También hubo momentos en que las instrucciones no eran claras, lo que me confundió al ubicar y crear nuevas carpetas. Con la ayuda de mi profesora, pude resolver estos problemas. Esta experiencia ha mejorado mi capacidad para manejar proyectos más grandes y complejos, destacando la importancia de tener una buena documentación y contar con el apoyo de los maestros para resolver problemas técnicos.
